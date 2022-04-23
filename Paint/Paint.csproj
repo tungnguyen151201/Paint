@@ -1,0 +1,51 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Images\clear.png" />
+    <None Remove="Images\new.png" />
+    <None Remove="Images\open.png" />
+    <None Remove="Images\save.png" />
+    <None Remove="Images\saveas.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Extended.Wpf.Toolkit" Version="4.2.0" />
+    <PackageReference Include="PropertyChanged.Fody" Version="3.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Contract\Contract.csproj" />
+    <ProjectReference Include="..\Line2D\Line2D.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\clear.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\new.png" />
+    <Resource Include="Images\open.png" />
+    <Resource Include="Images\save.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\saveas.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Images\ellipse.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Images\line.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Images\rectangle.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
